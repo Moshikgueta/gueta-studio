@@ -126,6 +126,30 @@ h2{font-size:clamp(42px,5.4vw,74px);line-height:1;margin-top:18px}
 .badge{display:inline-block;margin-left:10px;padding:3px 10px;border-radius:999px;background:var(--terra-soft);color:var(--terra-2);font:600 11px var(--sans);letter-spacing:.1em;text-transform:uppercase;vertical-align:middle}
 @media (max-width:900px){.case,.case.rev{grid-template-columns:1fr;gap:48px}.case.rev .case-media{order:0}.case-media{margin-right:5%}}
 
+/* interações assinatura */
+.sig-sec{background:var(--night);color:var(--on-night)}
+.sig-sec .kick{color:#E08A62}
+.sig-sec i.t{color:#E9A07C}
+.sig-sec .sec-head p{color:var(--on-night-muted)}
+.sgrid{display:grid;grid-template-columns:1.45fr 1fr 1fr;gap:20px}
+.scard{display:flex;flex-direction:column;border-radius:22px;background:var(--night-2);box-shadow:0 0 0 1px var(--night-line);overflow:hidden}
+.stage-v{position:relative;display:grid;place-items:center;padding:32px 28px;min-height:420px;background:radial-gradient(80% 70% at 50% 40%,rgba(224,138,98,.16),rgba(224,138,98,0))}
+.stage-v video{display:block;width:100%;height:auto;background:#000}
+.vb{width:100%;border-radius:10px;overflow:hidden;box-shadow:0 30px 60px -25px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.08)}
+.vb .bar{height:24px;display:flex;align-items:center;gap:5px;padding:0 10px;background:#22314F}
+.vb .bar i{width:7px;height:7px;border-radius:50%;background:#3C4D6E}
+.vp{width:min(230px,70%);border-radius:30px;padding:6px;background:#060B14;box-shadow:0 30px 60px -25px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.1)}
+.vp video{border-radius:24px}
+.vm{width:min(300px,88%);border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -25px rgba(0,0,0,.7)}
+.scard .txt{padding:26px 28px 30px;border-top:1px solid var(--night-line)}
+.scard .who{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#E08A62}
+.scard h3{font-size:32px;line-height:1.05;margin:8px 0 10px}
+.scard p{margin:0;color:var(--on-night-muted);font-size:15px}
+.sig-note{margin:28px 0 0;color:var(--on-night-muted);font-size:15px;max-width:52em}
+.sig-note b{color:var(--on-night);font-weight:600}
+@media (max-width:1000px){.sgrid{grid-template-columns:1fr 1fr}.scard:first-child{grid-column:1/-1}}
+@media (max-width:640px){.sgrid{grid-template-columns:1fr}.stage-v{min-height:0;padding:28px 20px}}
+
 /* features */
 .feat{background:var(--paper);border-block:1px solid var(--line)}
 .fgrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
@@ -219,6 +243,7 @@ footer a{text-decoration:none;color:var(--on-night)}
     <a class="brand" href="#" aria-label="Gueta Studio, início"><b>Gueta</b><small>Studio</small></a>
     <nav aria-label="Seções">
       <a href="#trabalhos">Trabalhos</a>
+      <a href="#interacoes">Interações</a>
       <a href="#diferenciais">Diferenciais</a>
       <a href="#processo">Processo</a>
       <a href="#investimento">Investimento</a>
@@ -329,6 +354,30 @@ footer a{text-decoration:none;color:var(--on-night)}
     </div>
   </section>
 
+  <section id="interacoes" class="sig-sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="kick">Interações assinatura</span><h2>Detalhes que viram <i class="t">assunto</i>.</h2></div>
+        <p>Cada projeto ganha pelo menos um momento que o cliente não espera, pensado a partir do que a casa tem de único. É isso que faz alguém mandar o link para os amigos.</p>
+      </div>
+      <div class="sgrid">
+        <article class="scard">
+          <div class="stage-v"><div class="vb"><div class="bar"><i></i><i></i><i></i></div><video data-v muted loop playsinline preload="none" poster="media/pizza.jpg" width="960" height="600" aria-label="Vídeo: a pizza desce girando até o prato e troca ao passar o mouse"><source src="media/pizza.mp4" type="video/mp4"></video></div></div>
+          <div class="txt"><span class="who">Balcão Pizza Napoletana</span><h3>A pizza que gira</h3><p>Ao rolar até o cardápio, a pizza desce girando até o prato. Passe o mouse em outra e ela entra com farinha caindo, como saindo do forno.</p></div>
+        </article>
+        <article class="scard">
+          <div class="stage-v"><div class="vp"><video data-v muted loop playsinline preload="none" poster="media/feed.jpg" width="390" height="664" aria-label="Vídeo: cardápio em modo feed, deslizando entre as pizzas e curtindo uma"><source src="media/feed.mp4" type="video/mp4"></video></div></div>
+          <div class="txt"><span class="who">Balcão · El Tumi</span><h3>Cardápio em modo feed</h3><p>Um prato por tela, como nas redes. O cliente desliza, toca duas vezes para curtir, e os mais curtidos viram ranking.</p></div>
+        </article>
+        <article class="scard">
+          <div class="stage-v"><div class="vm"><video data-v muted loop playsinline preload="none" poster="media/mupeco.jpg" width="524" height="616" aria-label="Vídeo: o cliente arrasta e vê o café passar pelo Mupeco"><source src="media/mupeco.mp4" type="video/mp4"></video></div></div>
+          <div class="txt"><span class="who">El Tumi Café</span><h3>O Mupeco interativo</h3><p>O cliente arrasta e vê o café passar pela cerâmica, da água quente à xícara pronta. Um método raro, explicado em cinco segundos.</p></div>
+        </article>
+      </div>
+      <p class="sig-note">No pacote <b>Completo</b>, a sua casa ganha a interação dela: a massa que fermenta, o café que passa, o prato que chega na mesa.</p>
+    </div>
+  </section>
+
   <section id="diferenciais" class="feat">
     <div class="wrap">
       <div class="sec-head">
@@ -390,7 +439,7 @@ footer a{text-decoration:none;color:var(--on-night)}
             <li>Tudo do pacote Essencial</li>
             <li class="plus">Cardápio em modo feed, com curtidas</li>
             <li class="plus">Português, espanhol e inglês</li>
-            <li class="plus">Um destaque interativo do diferencial da casa</li>
+            <li class="plus">Uma interação assinatura da casa (como a pizza que gira)</li>
             <li class="plus">Pedidos pelo WhatsApp ou loja da casa</li>
             <li class="plus">Panfleto para imprimir, com QR code</li>
           </ul>
@@ -483,6 +532,18 @@ $$("[data-contact]").forEach(a => {
   a.target = "_blank"; a.rel = "noopener";
 });
 $$("[data-ig]").forEach(a => { if (STUDIO.instagram) a.href = "https://instagram.com/" + STUDIO.instagram; else a.hidden = true; });
+/* vídeos tocam só quando aparecem na tela (e nunca com "reduzir movimento") */
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const vids = $$("[data-v]");
+if (reduceMotion) vids.forEach(v => { v.controls = true; });
+else if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { if (v.preload === "none") { v.preload = "auto"; v.load(); } v.play().catch(()=>{}); }
+    else v.pause();
+  }), {threshold: .35});
+  vids.forEach(v => io.observe(v));
+}
 const hd = document.querySelector("header");
 addEventListener("scroll", () => hd.classList.toggle("scrolled", scrollY > 20), {passive:true});
 </script>
