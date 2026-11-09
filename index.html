@@ -150,6 +150,50 @@ h2{font-size:clamp(42px,5.4vw,74px);line-height:1;margin-top:18px}
 @media (max-width:1000px){.sgrid{grid-template-columns:1fr 1fr}.scard:first-child{grid-column:1/-1}}
 @media (max-width:640px){.sgrid{grid-template-columns:1fr}.stage-v{min-height:0;padding:28px 20px}}
 
+/* restaurantes e cafés */
+.resto{background:var(--stone)}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.tile{position:relative;display:flex;flex-direction:column;border-radius:22px;background:var(--paper);box-shadow:0 0 0 1px var(--line);overflow:hidden}
+.tile.feedt{grid-column:span 2;grid-row:span 2;background:var(--night);color:var(--on-night)}
+.tile.w2{grid-column:span 2}
+.tile .vis{position:relative;flex:1;display:grid;place-items:center;padding:56px 24px 8px;min-height:220px}
+.tile .cap{padding:18px 24px 24px}
+.tile h3{font-size:29px;line-height:1.05;margin:0 0 6px}
+.tile p{margin:0;color:var(--ink-soft);font-size:14.5px}
+.tile.feedt p{color:var(--on-night-muted)}
+.chip{position:absolute;top:16px;left:16px;z-index:1;font:600 10.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--terra-soft);color:var(--terra-2)}
+.chip.live{background:#E3EFE6;color:#2F6B45}
+.feedt .chip.live{background:rgba(62,142,94,.22);color:#9BD4AE}
+.feedt .phone{position:relative;right:auto;bottom:auto;width:min(250px,70%);margin-top:18px}
+.loja-img{width:100%;border-radius:12px;box-shadow:0 20px 40px -24px rgba(20,35,59,.45),0 0 0 1px var(--line)}
+/* mini interfaces */
+.ui{width:100%;max-width:330px;background:#fff;border-radius:16px;box-shadow:0 24px 48px -28px rgba(20,35,59,.5),0 0 0 1px var(--line);padding:16px;font-size:13.5px;color:var(--ink)}
+.ui h4{margin:0 0 10px;font:400 21px/1.1 var(--serif)}
+.rank{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.rank li{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center}
+.rank .n{font:400 20px/1 var(--serif);color:var(--terra)}
+.rank .bar{height:6px;border-radius:3px;background:var(--terra-soft);margin-top:5px;overflow:hidden}
+.rank .bar i{display:block;height:100%;background:var(--terra);border-radius:3px}
+.rank svg{width:16px;height:16px;color:#D9483B}
+.ev{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.ev:first-of-type{border-top:0;padding-top:0}
+.ev .d{display:grid;place-items:center;height:52px;border-radius:12px;background:var(--night);color:var(--on-night);line-height:1}
+.ev .d b{font:400 22px var(--serif)}
+.ev .d small{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#E9A07C}
+.ev strong{display:block;font-weight:600}
+.ev span{color:var(--muted);font-size:12.5px}
+.ev .go{display:inline-block;margin-top:5px;font-size:12px;font-weight:600;color:var(--terra)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.filters span{padding:5px 10px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line-2);font-size:12px;color:var(--ink-soft)}
+.filters span.on{background:#2F6B45;color:#fff;box-shadow:none}
+.dish{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.dish b{font-weight:600}
+.dish em{font-style:normal;display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;background:#E3EFE6;color:#2F6B45;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;vertical-align:1px}
+.resto-cta{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px;padding:26px 30px;border-radius:22px;background:var(--paper);box-shadow:0 0 0 1px var(--line)}
+.resto-cta p{margin:0;font:400 26px/1.2 var(--serif);max-width:28ch}
+@media (max-width:1000px){.bento{grid-template-columns:repeat(2,1fr)}.tile.feedt{grid-column:1/-1;grid-row:auto}.tile.w2{grid-column:span 1}}
+@media (max-width:640px){.bento{grid-template-columns:1fr}.tile.w2{grid-column:auto}.resto-cta{padding:22px}.resto-cta p{font-size:23px}}
+
 /* features */
 .feat{background:var(--paper);border-block:1px solid var(--line)}
 .fgrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
@@ -244,8 +288,8 @@ footer a{text-decoration:none;color:var(--on-night)}
     <nav aria-label="Seções">
       <a href="#trabalhos">Trabalhos</a>
       <a href="#interacoes">Interações</a>
-      <a href="#diferenciais">Diferenciais</a>
-      <a href="#processo">Processo</a>
+      <a href="#restaurantes">Restaurantes</a>
+            <a href="#processo">Processo</a>
       <a href="#investimento">Investimento</a>
       <a href="#sobre">Sobre</a>
     </nav>
@@ -282,6 +326,86 @@ footer a{text-decoration:none;color:var(--on-night)}
   <div class="strip" aria-label="Projetos no ar">
     <div class="wrap"><span class="dot" aria-hidden="true"></span><span>No ar</span><b>Hebraico <i>Fluente</i></b><b>El Tumi <i>Café</i></b><b>Balcão <i>Pizza Napoletana</i></b></div>
   </div>
+
+  <section id="interacoes" class="sig-sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="kick">Interações assinatura</span><h2>Detalhes que viram <i class="t">assunto</i>.</h2></div>
+        <p>Cada projeto ganha pelo menos um momento que o cliente não espera, pensado a partir do que a casa tem de único. É isso que faz alguém mandar o link para os amigos.</p>
+      </div>
+      <div class="sgrid">
+        <article class="scard">
+          <div class="stage-v"><div class="vb"><div class="bar"><i></i><i></i><i></i></div><video data-v muted loop playsinline preload="none" poster="media/pizza.jpg" width="960" height="600" aria-label="Vídeo: a pizza desce girando até o prato e troca ao passar o mouse"><source src="media/pizza.mp4" type="video/mp4"></video></div></div>
+          <div class="txt"><span class="who">Balcão Pizza Napoletana</span><h3>A pizza que gira</h3><p>Ao rolar até o cardápio, a pizza desce girando até o prato. Passe o mouse em outra e ela entra com farinha caindo, como saindo do forno.</p></div>
+        </article>
+        <article class="scard">
+          <div class="stage-v"><div class="vp"><video data-v muted loop playsinline preload="none" poster="media/feed.jpg" width="390" height="664" aria-label="Vídeo: cardápio em modo feed, deslizando entre as pizzas e curtindo uma"><source src="media/feed.mp4" type="video/mp4"></video></div></div>
+          <div class="txt"><span class="who">Balcão · El Tumi</span><h3>Cardápio em modo feed</h3><p>Um prato por tela, como nas redes. O cliente desliza, toca duas vezes para curtir, e os mais curtidos viram ranking.</p></div>
+        </article>
+        <article class="scard">
+          <div class="stage-v"><div class="vm"><video data-v muted loop playsinline preload="none" poster="media/mupeco.jpg" width="524" height="616" aria-label="Vídeo: o cliente arrasta e vê o café passar pelo Mupeco"><source src="media/mupeco.mp4" type="video/mp4"></video></div></div>
+          <div class="txt"><span class="who">El Tumi Café</span><h3>O Mupeco interativo</h3><p>O cliente arrasta e vê o café passar pela cerâmica, da água quente à xícara pronta. Um método raro, explicado em cinco segundos.</p></div>
+        </article>
+      </div>
+      <p class="sig-note">No pacote <b>Completo</b>, a sua casa ganha a interação dela: a massa que fermenta, o café que passa, o prato que chega na mesa.</p>
+    </div>
+  </section>
+
+  <section id="restaurantes" class="resto">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="kick">Para restaurantes e cafés</span><h2>O cardápio que <i class="t">vende</i> por você.</h2></div>
+        <p>Recursos pensados para quem vive de mesa cheia. Você escolhe os que fazem sentido para a sua casa, e eu desenho cada um com a cara dela.</p>
+      </div>
+      <div class="bento">
+        <article class="tile feedt">
+          <span class="chip live">No ar no El Tumi e na Balcão</span>
+          <div class="vis"><div class="phone"><img src="shots/tumi-feed.jpg" alt="Cardápio do El Tumi em modo feed, um item por tela" width="780" height="1688" loading="lazy"></div></div>
+          <div class="cap"><h3>Modo feed</h3><p>O cardápio vira uma rede social: um prato por tela, foto grande, deslize para o próximo e toque duas vezes para curtir. O cliente passa mais tempo olhando e escolhe com fome.</p></div>
+        </article>
+        <article class="tile w2">
+          <span class="chip live">No ar</span>
+          <div class="vis"><div class="ui" role="img" aria-label="Exemplo do ranking dos itens mais curtidos">
+            <h4>Os mais amados</h4>
+            <ol class="rank">
+              <li><span class="n">1</span><div>Margherita<div class="bar"><i style="width:100%"></i></div></div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.5 5c2 0 3.6 1.1 4.5 2.6C11.9 6.1 13.5 5 15.5 5 19 5 21.1 8.5 19.6 11.8 17.5 16.4 12 21 12 21z"/></svg></li>
+              <li><span class="n">2</span><div>Cappuccino<div class="bar"><i style="width:78%"></i></div></div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.5 5c2 0 3.6 1.1 4.5 2.6C11.9 6.1 13.5 5 15.5 5 19 5 21.1 8.5 19.6 11.8 17.5 16.4 12 21 12 21z"/></svg></li>
+              <li><span class="n">3</span><div>Alfajor da casa<div class="bar"><i style="width:61%"></i></div></div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.5 5c2 0 3.6 1.1 4.5 2.6C11.9 6.1 13.5 5 15.5 5 19 5 21.1 8.5 19.6 11.8 17.5 16.4 12 21 12 21z"/></svg></li>
+            </ol>
+          </div></div>
+          <div class="cap"><h3>Os mais amados</h3><p>As curtidas viram um ranking ao vivo. Quem não sabe o que pedir vai direto no favorito da casa, e você descobre o que o público mais quer.</p></div>
+        </article>
+        <article class="tile w2">
+          <span class="chip live">No ar no El Tumi</span>
+          <div class="vis"><img class="loja-img" src="shots/tumi-loja.jpg" alt="Loja digital do El Tumi com café em grão, Mupeco e alfajores" width="1000" height="645" loading="lazy"></div>
+          <div class="cap"><h3>Loja digital</h3><p>Café em grão, produtos e lembranças da casa à venda no próprio site. O cliente monta o pedido e retira no balcão.</p></div>
+        </article>
+        <article class="tile w2">
+          <span class="chip">Sob medida</span>
+          <div class="vis"><div class="ui" role="img" aria-label="Exemplo de agenda de eventos dentro do site">
+            <h4>Agenda da casa</h4>
+            <div class="ev"><div class="d"><small>Sex</small><b>14</b></div><div><strong>Noite de música ao vivo</strong><span>20h · reserva pelo WhatsApp</span><br><span class="go">Quero ir →</span></div></div>
+            <div class="ev"><div class="d"><small>Sáb</small><b>22</b></div><div><strong>Oficina de latte art</strong><span>10h · 8 vagas</span><br><span class="go">Garantir vaga →</span></div></div>
+          </div></div>
+          <div class="cap"><h3>Eventos no site</h3><p>Música ao vivo, degustações, oficinas, menu de data especial. A agenda fica no site e cada evento tem botão de reserva direto no WhatsApp.</p></div>
+        </article>
+        <article class="tile w2">
+          <span class="chip">Sob medida</span>
+          <div class="vis"><div class="ui" role="img" aria-label="Exemplo de filtro de cardápio por comida vegana e vegetariana">
+            <div class="filters"><span>Tudo</span><span class="on">Vegano</span><span>Vegetariano</span><span>Sem glúten</span></div>
+            <div class="dish"><span><b>Bowl de quinoa</b><em>Vegano</em></span><span>R$ 38</span></div>
+            <div class="dish"><span><b>Pizza de cogumelos</b><em>Vegano</em></span><span>R$ 49</span></div>
+            <div class="dish"><span><b>Latte de aveia</b><em>Vegano</em></span><span>R$ 19</span></div>
+          </div></div>
+          <div class="cap"><h3>Filtro vegano e vegetariano</h3><p>Com um toque, o cliente vê só o que pode comer: vegano, vegetariano, sem glúten, sem lactose. Menos perguntas para o garçom e mais confiança na hora de pedir.</p></div>
+        </article>
+      </div>
+      <div class="resto-cta">
+        <p>Quer ver como ficaria no cardápio da sua casa?</p>
+        <a class="btn btn-terra" data-contact href="#contato">Pedir uma prévia sem compromisso</a>
+      </div>
+    </div>
+  </section>
 
   <section id="trabalhos">
     <div class="wrap">
@@ -351,30 +475,6 @@ footer a{text-decoration:none;color:var(--on-night)}
           <a class="link" href="https://moshikgueta.github.io/balcao-pizza/" target="_blank" rel="noopener">Ver o site ao vivo ↗</a>
         </div>
       </article>
-    </div>
-  </section>
-
-  <section id="interacoes" class="sig-sec">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><span class="kick">Interações assinatura</span><h2>Detalhes que viram <i class="t">assunto</i>.</h2></div>
-        <p>Cada projeto ganha pelo menos um momento que o cliente não espera, pensado a partir do que a casa tem de único. É isso que faz alguém mandar o link para os amigos.</p>
-      </div>
-      <div class="sgrid">
-        <article class="scard">
-          <div class="stage-v"><div class="vb"><div class="bar"><i></i><i></i><i></i></div><video data-v muted loop playsinline preload="none" poster="media/pizza.jpg" width="960" height="600" aria-label="Vídeo: a pizza desce girando até o prato e troca ao passar o mouse"><source src="media/pizza.mp4" type="video/mp4"></video></div></div>
-          <div class="txt"><span class="who">Balcão Pizza Napoletana</span><h3>A pizza que gira</h3><p>Ao rolar até o cardápio, a pizza desce girando até o prato. Passe o mouse em outra e ela entra com farinha caindo, como saindo do forno.</p></div>
-        </article>
-        <article class="scard">
-          <div class="stage-v"><div class="vp"><video data-v muted loop playsinline preload="none" poster="media/feed.jpg" width="390" height="664" aria-label="Vídeo: cardápio em modo feed, deslizando entre as pizzas e curtindo uma"><source src="media/feed.mp4" type="video/mp4"></video></div></div>
-          <div class="txt"><span class="who">Balcão · El Tumi</span><h3>Cardápio em modo feed</h3><p>Um prato por tela, como nas redes. O cliente desliza, toca duas vezes para curtir, e os mais curtidos viram ranking.</p></div>
-        </article>
-        <article class="scard">
-          <div class="stage-v"><div class="vm"><video data-v muted loop playsinline preload="none" poster="media/mupeco.jpg" width="524" height="616" aria-label="Vídeo: o cliente arrasta e vê o café passar pelo Mupeco"><source src="media/mupeco.mp4" type="video/mp4"></video></div></div>
-          <div class="txt"><span class="who">El Tumi Café</span><h3>O Mupeco interativo</h3><p>O cliente arrasta e vê o café passar pela cerâmica, da água quente à xícara pronta. Um método raro, explicado em cinco segundos.</p></div>
-        </article>
-      </div>
-      <p class="sig-note">No pacote <b>Completo</b>, a sua casa ganha a interação dela: a massa que fermenta, o café que passa, o prato que chega na mesa.</p>
     </div>
   </section>
 
