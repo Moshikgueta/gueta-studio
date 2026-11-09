@@ -3,185 +3,212 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Gueta Studio · Sites sob medida para negócios com história</title>
-<meta name="description" content="Gueta Studio cria sites sob medida para cafés, restaurantes e marcas independentes: cardápio interativo, pedidos pelo WhatsApp e três idiomas.">
-<meta name="theme-color" content="#0E0C0A">
+<title>Gueta Studio · Sites e plataformas sob medida</title>
+<meta name="description" content="Gueta Studio, de Moshik Gueta: sites e plataformas sob medida para cafés, restaurantes, escolas e marcas independentes. Cardápio interativo, pedidos pelo WhatsApp, cursos online e três idiomas.">
+<meta name="theme-color" content="#F3EDE3">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gueta Studio · Sites sob medida">
-<meta property="og:description" content="Sites únicos para cafés, restaurantes e marcas independentes.">
+<meta property="og:title" content="Gueta Studio · Sites e plataformas sob medida">
+<meta property="og:description" content="Sites únicos para negócios com história. Por Moshik Gueta.">
 <meta property="og:image" content="https://moshikgueta.github.io/gueta-studio/shots/tumi-hero.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400&text=%D7%A2%D7%91%D7%A8%D7%99%D7%AA&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="shots/hf-hero.jpg">
 <style>
 :root{
-  --bg:#0E0C0A; --bg-2:#151210; --bg-3:#1C1815; --ink:#F3EDE3; --muted:#A39A90; --dim:#6F675F;
-  --line:rgba(243,237,227,.12); --gold:#C9A46A; --gold-2:#E2C48F;
-  --serif:"Instrument Serif",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
+  /* Pedra de Jerusalém, tinta azul-marinho e terracota: a mesma família de cores dos meus projetos */
+  --stone:#F3EDE3; --paper:#FBF8F3;
+  --ink:#14233B; --ink-soft:#3B4759; --muted:#6A6459;
+  --line:rgba(20,35,59,.13); --line-2:rgba(20,35,59,.22);
+  --terra:#B4512D; --terra-2:#9C4224; --terra-soft:#F2E1D6;
+  --night:#101D31; --night-2:#18294A; --on-night:#F3EDE3; --on-night-muted:#A9B2C1; --night-line:rgba(243,237,227,.14);
+  --serif:"Instrument Serif",Georgia,serif; --sans:"Instrument Sans",system-ui,-apple-system,sans-serif; --he:"Frank Ruhl Libre","Times New Roman",serif;
   --ease:cubic-bezier(.23,1,.32,1);
+  --shadow:0 1px 2px rgba(20,35,59,.06),0 30px 60px -28px rgba(20,35,59,.35);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--stone);color:var(--ink);font:400 16.5px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
+::selection{background:var(--terra);color:#fff}
 .wrap{width:min(1200px,100% - 48px);margin-inline:auto}
 @media (max-width:600px){.wrap{width:calc(100% - 36px)}}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
-.serif{font-family:var(--serif);font-weight:400}
-.kick{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:4px}
+.he{font-family:var(--he);direction:rtl;unicode-bidi:isolate}
+.kick{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--terra)}
 .kick::before{content:"";width:28px;height:1px;background:currentColor}
-h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;margin:0;text-wrap:balance}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;font:500 15px var(--sans);text-decoration:none;cursor:pointer;border:0;transition:background-color .2s ease,color .2s ease,box-shadow .2s ease,transform .12s var(--ease)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.012em;margin:0;text-wrap:balance}
+i.t{font-style:italic;color:var(--terra)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:500 15px var(--sans);text-decoration:none;cursor:pointer;border:0;transition:background-color .2s ease,color .2s ease,box-shadow .2s ease,transform .12s var(--ease)}
 .btn:active{transform:scale(.97)}
-.btn-gold{background:var(--gold);color:#16110A}
-@media (hover:hover){.btn-gold:hover{background:var(--gold-2)}}
-.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px rgba(243,237,227,.3)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-ink{background:var(--ink);color:var(--paper)}
+@media (hover:hover){.btn-ink:hover{background:var(--night-2)}}
+.btn-terra{background:var(--terra);color:#fff}
+@media (hover:hover){.btn-terra:hover{background:var(--terra-2)}}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line-2)}
 @media (hover:hover){.btn-line:hover{box-shadow:inset 0 0 0 1px var(--ink)}}
-.btn svg{width:18px;height:18px}
+.night .btn-line{color:var(--on-night);box-shadow:inset 0 0 0 1px rgba(243,237,227,.3)}
+@media (hover:hover){.night .btn-line:hover{box-shadow:inset 0 0 0 1px var(--on-night)}}
 
 /* header */
-header{position:sticky;top:0;z-index:20;background:rgba(14,12,10,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .2s ease}
+header{position:sticky;top:0;z-index:20;background:rgba(243,237,227,.95);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .2s ease}
 header.scrolled{border-bottom-color:var(--line)}
 .nav{display:flex;align-items:center;gap:36px;height:76px}
 .brand{text-decoration:none;display:flex;align-items:baseline;gap:8px;line-height:1}
-.brand b{font:400 30px/1 var(--serif);font-style:italic}
-.brand small{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.brand b{font:400 31px/1 var(--serif);font-style:italic}
+.brand small{font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--terra)}
 .nav nav{display:flex;gap:30px;margin-left:auto;font-size:14.5px}
-.nav nav a{text-decoration:none;color:var(--muted);transition:color .15s ease}
-@media (hover:hover){.nav nav a:hover{color:var(--ink)}}
-.nav .btn{height:44px;padding:0 20px;font-size:14px}
+.nav nav a{text-decoration:none;color:var(--ink-soft);transition:color .15s ease}
+@media (hover:hover){.nav nav a:hover{color:var(--terra)}}
+.nav .btn{min-height:44px;padding:0 20px;font-size:14px}
 @media (max-width:880px){.nav nav{display:none}.nav .btn{margin-left:auto}}
-@media (max-width:420px){.nav .btn{height:40px;padding:0 16px;font-size:13px}.brand b{font-size:27px}}
+@media (max-width:420px){.nav .btn{min-height:42px;padding:0 16px;font-size:13.5px}.brand b{font-size:27px}}
 
 /* hero */
-.hero{position:relative;padding:clamp(48px,8vw,110px) 0 80px;overflow:hidden}
-.hero::before{content:"";position:absolute;right:-20%;top:-30%;width:80vw;height:80vw;max-width:1100px;max-height:1100px;background:radial-gradient(closest-side,rgba(201,164,106,.16),rgba(201,164,106,0));pointer-events:none}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
-h1{font-size:clamp(52px,7.4vw,108px);line-height:.94;margin:24px 0 28px}
-h1 i{color:var(--gold-2)}
-.lead{font-size:clamp(17px,1.5vw,19.5px);color:var(--muted);max-width:33em;margin:0 0 36px;text-wrap:pretty}
-.lead b{color:var(--ink);font-weight:500}
+.hero{position:relative;padding:clamp(48px,7vw,100px) 0 clamp(64px,8vw,110px);overflow:hidden}
+.hero::before{content:"";position:absolute;right:-18%;top:-35%;width:75vw;height:75vw;max-width:1000px;max-height:1000px;background:radial-gradient(closest-side,rgba(180,81,45,.12),rgba(180,81,45,0));pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+h1{font-size:clamp(54px,7.2vw,106px);line-height:.95;margin:24px 0 28px}
+.lead{font-size:clamp(17px,1.45vw,19.5px);color:var(--ink-soft);max-width:33em;margin:0 0 36px;text-wrap:pretty}
+.lead b{color:var(--ink);font-weight:600}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
-.proof{display:flex;gap:36px;margin-top:52px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
-.proof b{display:block;font:400 34px/1 var(--serif);color:var(--ink)}
-.proof span{font-size:13px;color:var(--muted)}
-/* device composition */
-.devices{position:relative;aspect-ratio:1/.92;width:100%}
-.browser{position:absolute;left:0;top:4%;width:88%;border-radius:12px;overflow:hidden;background:#1d1a17;box-shadow:0 60px 120px -40px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.07)}
-.browser .bar{height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#24201C}
-.browser .bar i{width:9px;height:9px;border-radius:50%;background:#4A433C}
-.browser .bar span{margin-left:12px;flex:1;height:16px;border-radius:8px;background:#1A1714;font-size:10px;color:var(--dim);display:flex;align-items:center;padding:0 10px}
+.proof{display:flex;gap:40px;margin-top:52px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.proof b{display:block;font:400 36px/1 var(--serif);color:var(--ink);font-variant-numeric:lining-nums}
+.proof span{font-size:13.5px;color:var(--muted)}
+@media (max-width:600px){.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}.proof b{font-size:30px;margin-bottom:6px}.proof span{font-size:12.5px;line-height:1.35;display:block}}
+.devices{position:relative;aspect-ratio:1/.9;width:100%}
+.browser{position:absolute;left:0;top:3%;width:90%;border-radius:12px;overflow:hidden;background:var(--paper);box-shadow:var(--shadow),0 0 0 1px var(--line)}
+.browser .bar{height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#E9E1D3}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#CDBFA9}
+.browser .bar span{margin-left:12px;flex:1;height:17px;border-radius:9px;background:var(--paper);font-size:10px;color:var(--muted);display:flex;align-items:center;padding:0 10px;white-space:nowrap;overflow:hidden}
 .browser img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
-.phone{position:absolute;right:0;bottom:0;width:34%;aspect-ratio:9/19.3;border-radius:34px;padding:7px;background:#0A0908;box-shadow:0 50px 90px -30px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.1)}
-.phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:28px}
-.phone::after{content:"";position:absolute;top:13px;left:50%;transform:translateX(-50%);width:30%;height:16px;border-radius:10px;background:#0A0908}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:48px}.devices{max-width:560px}}
+.phone{position:absolute;right:0;bottom:0;width:32%;aspect-ratio:9/19.4;border-radius:34px;padding:7px;background:var(--night);box-shadow:0 50px 80px -30px rgba(16,29,49,.55),0 0 0 1px rgba(16,29,49,.4)}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:28px;background:var(--paper)}
+.phone::after{content:"";position:absolute;top:13px;left:50%;transform:translateX(-50%);width:30%;height:15px;border-radius:10px;background:var(--night)}
+.phone.p2{right:26%;bottom:-6%;width:27%;z-index:1}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:44px}.devices{max-width:580px}}
 
 /* strip */
-.strip{border-block:1px solid var(--line);padding:22px 0}
-.strip .wrap{display:flex;align-items:center;gap:40px;flex-wrap:wrap;color:var(--muted);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.strip{border-block:1px solid var(--line);padding:22px 0;background:var(--paper)}
+.strip .wrap{display:flex;align-items:center;gap:18px 40px;flex-wrap:wrap;color:var(--muted);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
 .strip b{font:400 26px/1 var(--serif);letter-spacing:0;text-transform:none;color:var(--ink)}
-.strip i{font-style:italic}
+.strip b i{font-style:italic;color:var(--terra)}
+.strip .dot{width:7px;height:7px;border-radius:50%;background:#3E8E5E;box-shadow:0 0 0 4px rgba(62,142,94,.15)}
 
 section{padding:clamp(80px,10vw,140px) 0}
 .sec-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:64px}
-h2{font-size:clamp(42px,5.6vw,76px);line-height:1;margin-top:18px}
-h2 i{color:var(--gold-2)}
-.sec-head p{margin:0;color:var(--muted);justify-self:end;max-width:30em}
-@media (max-width:900px){.sec-head{grid-template-columns:1fr;gap:16px;margin-bottom:40px}.sec-head p{justify-self:start}}
+h2{font-size:clamp(42px,5.4vw,74px);line-height:1;margin-top:18px}
+.sec-head p{margin:0;color:var(--ink-soft);justify-self:end;max-width:30em}
+@media (max-width:900px){.sec-head{grid-template-columns:1fr;gap:16px;margin-bottom:44px}.sec-head p{justify-self:start}}
 
 /* cases */
-.case{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;padding:0 0 clamp(80px,10vw,130px)}
+.case{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:center;padding:0 0 clamp(90px,11vw,140px)}
+.case:last-child{padding-bottom:0}
 .case.rev{grid-template-columns:.85fr 1.15fr}
 .case.rev .case-media{order:2}
-.case-media{position:relative}
+.case-media{position:relative;padding-bottom:7%}
 .case-media .browser{position:relative;width:100%;top:0}
-.case-media .phone{width:30%;right:-4%;bottom:-10%}
-.case-media .tile{position:absolute;left:-5%;bottom:-12%;width:42%;border-radius:10px;overflow:hidden;box-shadow:0 40px 70px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.08)}
-.case-num{font:400 15px var(--sans);color:var(--gold);letter-spacing:.14em}
-.case h3{font-size:clamp(38px,4.4vw,58px);line-height:1;margin:14px 0 6px}
-.case .place{color:var(--muted);font-size:14.5px;margin:0 0 24px}
-.case p.story{color:var(--muted);margin:0 0 24px}
-.case p.story b{color:var(--ink);font-weight:500}
-.built{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:0}
-.built li{display:grid;grid-template-columns:22px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:15px}
-.built li::before{content:"✦";color:var(--gold);font-size:12px;padding-top:3px}
-.case .link{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:500;border-bottom:1px solid var(--gold);padding-bottom:4px}
-@media (hover:hover){.case .link:hover{color:var(--gold-2)}}
-@media (max-width:900px){.case,.case.rev{grid-template-columns:1fr;gap:72px}.case.rev .case-media{order:0}.case-media{margin-right:6%}}
+.case-media .phone{width:28%;right:-3%;bottom:0}
+.case-num{font-size:13px;font-weight:600;color:var(--terra);letter-spacing:.14em;text-transform:uppercase}
+.case h3{font-size:clamp(40px,4.4vw,60px);line-height:1;margin:14px 0 8px}
+.case .place{color:var(--muted);font-size:14.5px;margin:0 0 22px}
+.case p.story{color:var(--ink-soft);margin:0 0 24px}
+.case p.story b{color:var(--ink);font-weight:600}
+.built{list-style:none;margin:0 0 30px;padding:0}
+.built li{display:grid;grid-template-columns:22px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:15.5px}
+.built li::before{content:"";width:7px;height:7px;margin-top:9px;border-radius:50%;background:var(--terra)}
+.case .link{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--ink);text-decoration:none;font-weight:600;background-image:linear-gradient(var(--terra),var(--terra));background-size:100% 1.5px;background-position:0 calc(100% - 8px);background-repeat:no-repeat;transition:color .15s ease}
+@media (hover:hover){.case .link:hover{color:var(--terra)}}
+.badge{display:inline-block;margin-left:10px;padding:3px 10px;border-radius:999px;background:var(--terra-soft);color:var(--terra-2);font:600 11px var(--sans);letter-spacing:.1em;text-transform:uppercase;vertical-align:middle}
+@media (max-width:900px){.case,.case.rev{grid-template-columns:1fr;gap:48px}.case.rev .case-media{order:0}.case-media{margin-right:5%}}
 
 /* features */
-.feat{background:var(--bg-2)}
+.feat{background:var(--paper);border-block:1px solid var(--line)}
 .fgrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .f{padding:36px 32px 40px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.f svg{width:28px;height:28px;color:var(--gold);margin-bottom:22px}
+.f svg{width:28px;height:28px;color:var(--terra);margin-bottom:22px}
 .f h3{font-size:30px;line-height:1.05;margin-bottom:10px}
-.f p{margin:0;color:var(--muted);font-size:15px}
+.f p{margin:0;color:var(--ink-soft);font-size:15px}
 @media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.fgrid{grid-template-columns:1fr}.f{padding:28px 22px 32px}}
 
 /* process */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s}
-.step{counter-increment:s;border-top:1px solid var(--line);padding-top:24px}
-.step::before{content:counter(s,decimal-leading-zero);display:block;font:400 54px/1 var(--serif);color:var(--gold);margin-bottom:18px}
-.step h3{font-size:28px;margin-bottom:8px}
-.step p{margin:0;color:var(--muted);font-size:15px}
-.step .when{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.step{counter-increment:s;border-top:1px solid var(--line-2);padding-top:24px}
+.step::before{content:counter(s,decimal-leading-zero);display:block;font:400 56px/1 var(--serif);color:var(--terra);margin-bottom:18px}
+.step h3{font-size:29px;margin-bottom:8px}
+.step p{margin:0;color:var(--ink-soft);font-size:15px}
+.step .when{display:inline-block;margin-top:14px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 @media (max-width:900px){.steps{grid-template-columns:1fr 1fr;gap:36px 24px}}
 @media (max-width:520px){.steps{grid-template-columns:1fr}}
 
 /* pricing */
-.price{background:var(--bg-2)}
+.night{background:var(--night);color:var(--on-night)}
+.night .kick{color:#E08A62}
+.night .sec-head p{color:var(--on-night-muted)}
+.night i.t{color:#E9A07C}
 .plans{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.plan{position:relative;background:var(--bg);border-radius:20px;padding:40px;box-shadow:0 0 0 1px var(--line);display:flex;flex-direction:column}
-.plan.pro{background:linear-gradient(160deg,#1F1A14,#120F0C);box-shadow:0 0 0 1px rgba(201,164,106,.5)}
-.plan .tag{position:absolute;top:22px;right:22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#16110A;background:var(--gold);padding:6px 12px;border-radius:999px;font-weight:600}
-.plan h3{font-size:38px}
-.plan .desc{color:var(--muted);margin:8px 0 26px}
+.plan{position:relative;background:var(--night-2);border-radius:22px;padding:40px;box-shadow:0 0 0 1px var(--night-line);display:flex;flex-direction:column}
+.plan.pro{background:var(--paper);color:var(--ink);box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.plan .tag{position:absolute;top:22px;right:22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--terra);padding:6px 12px;border-radius:999px;font-weight:600}
+.plan h3{font-size:40px}
+.plan .desc{color:var(--on-night-muted);margin:8px 0 26px}
+.plan.pro .desc{color:var(--ink-soft)}
 .amount{display:flex;align-items:baseline;gap:10px;margin-bottom:28px}
-.amount small{color:var(--muted);font-size:14px}
-.amount b{font:400 64px/1 var(--serif);letter-spacing:-.02em}
+.amount small{color:var(--on-night-muted);font-size:14px}
+.plan.pro .amount small{color:var(--muted)}
+.amount b{font:400 66px/1 var(--serif);letter-spacing:-.02em;font-variant-numeric:lining-nums}
 .plan ul{list-style:none;margin:0 0 32px;padding:0;flex:1}
-.plan li{padding:11px 0;border-top:1px solid var(--line);font-size:15px;display:grid;grid-template-columns:20px 1fr;gap:10px}
-.plan li::before{content:"";width:12px;height:7px;border-left:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(-45deg);margin-top:7px}
-.plan li.plus{color:var(--gold-2)}
-.care{margin-top:20px;display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;border-radius:20px;padding:30px 40px;box-shadow:0 0 0 1px var(--line)}
-.care b{font:400 40px/1 var(--serif)}
-.care b small{font:400 14px var(--sans);color:var(--muted)}
-.care p{margin:0;color:var(--muted);font-size:15px}
-.care h3{font-size:28px}
-.fine{margin:22px 0 0;font-size:13.5px;color:var(--dim)}
-@media (max-width:900px){.plans{grid-template-columns:1fr}.plan{padding:30px 24px}.care{grid-template-columns:1fr;gap:12px;padding:26px 24px}}
+.plan li{padding:11px 0;border-top:1px solid var(--night-line);font-size:15px;display:grid;grid-template-columns:20px 1fr;gap:10px}
+.plan.pro li{border-top-color:var(--line)}
+.plan li::before{content:"";width:12px;height:7px;border-left:1.5px solid #E08A62;border-bottom:1.5px solid #E08A62;transform:rotate(-45deg);margin-top:7px}
+.plan.pro li::before{border-color:var(--terra)}
+.plan li.plus{font-weight:600}
+.rows{margin-top:20px;display:grid;gap:12px}
+.row{display:grid;grid-template-columns:220px 1fr auto;gap:32px;align-items:center;border-radius:22px;padding:28px 40px;box-shadow:0 0 0 1px var(--night-line)}
+.row h3{font-size:28px}
+.row p{margin:0;color:var(--on-night-muted);font-size:15px}
+.row b{font:400 36px/1 var(--serif);white-space:nowrap}
+.row b small{font:400 14px var(--sans);color:var(--on-night-muted)}
+.fine{margin:22px 0 0;font-size:13.5px;color:var(--on-night-muted)}
+@media (max-width:900px){.plans{grid-template-columns:1fr}.plan{padding:32px 24px}.row{grid-template-columns:1fr;gap:10px;padding:26px 24px}}
 
 /* about */
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
-.about .big{font:400 clamp(30px,3.4vw,46px)/1.15 var(--serif);margin:0 0 28px;text-wrap:balance}
-.about .big i{color:var(--gold-2)}
-.about p{color:var(--muted);margin:0 0 18px;max-width:36em}
-.sig{margin-top:30px;font:400 italic 38px/1 var(--serif);color:var(--ink)}
-.sig small{display:block;font:400 13px var(--sans);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:10px}
-@media (max-width:900px){.about{grid-template-columns:1fr;gap:28px}}
+.about{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;align-items:center}
+.portrait{position:relative;margin:0}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
+.portrait figcaption{position:absolute;left:18px;bottom:18px;background:rgba(251,248,243,.94);border-radius:999px;padding:8px 16px;font-size:13px;color:var(--ink-soft)}
+.about .big{font:400 clamp(30px,3.3vw,46px)/1.15 var(--serif);margin:22px 0 26px;text-wrap:balance}
+.about p{color:var(--ink-soft);margin:0 0 18px;max-width:36em}
+.langs{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0;list-style:none}
+.langs li{padding:7px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line-2);font-size:14px;color:var(--ink-soft)}
+.langs .he{font-size:16px;line-height:1}
+.sig{margin-top:40px;font:400 italic 40px/1 var(--serif);color:var(--ink)}
+.sig small{display:block;font:600 12.5px var(--sans);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);margin-top:10px}
+@media (max-width:900px){.about{grid-template-columns:1fr;gap:40px}.portrait{max-width:420px}}
 
 /* faq */
 .faq{max-width:860px}
-details{border-top:1px solid var(--line)}
-details:last-child{border-bottom:1px solid var(--line)}
-summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;align-items:center;padding:24px 0;font:400 26px/1.2 var(--serif)}
+details{border-top:1px solid var(--line-2)}
+details:last-child{border-bottom:1px solid var(--line-2)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;align-items:center;min-height:44px;padding:22px 0;font:400 27px/1.2 var(--serif)}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font:300 28px var(--sans);color:var(--gold);transition:transform .25s var(--ease);flex:none}
+summary::after{content:"+";font:300 28px var(--sans);color:var(--terra);transition:transform .25s var(--ease);flex:none}
 details[open] summary::after{transform:rotate(45deg)}
-details p{margin:0 0 26px;color:var(--muted);max-width:44em}
+details p{margin:0 0 26px;color:var(--ink-soft);max-width:44em}
 
-/* final cta */
-.final{text-align:center;padding:clamp(100px,12vw,170px) 0;background:radial-gradient(60% 80% at 50% 100%,rgba(201,164,106,.18),rgba(201,164,106,0)),var(--bg)}
+/* final */
+.final{text-align:center;padding:clamp(100px,12vw,170px) 0;background:radial-gradient(60% 90% at 50% 110%,rgba(180,81,45,.35),rgba(180,81,45,0)),var(--night)}
 .final h2{font-size:clamp(48px,7vw,96px);max-width:14ch;margin:20px auto 26px}
-.final p{color:var(--muted);margin:0 auto 36px;max-width:34em}
+.final p{color:var(--on-night-muted);margin:0 auto 36px;max-width:34em}
 .final .cta{justify-content:center}
-footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--dim);font-size:13.5px}
+footer{background:var(--night);color:var(--on-night-muted);border-top:1px solid var(--night-line);padding:30px 0 40px;font-size:13.5px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer a{text-decoration:none;color:var(--muted)}
+footer a{text-decoration:none;color:var(--on-night)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
 </style>
 </head>
@@ -195,54 +222,76 @@ footer a{text-decoration:none;color:var(--muted)}
       <a href="#diferenciais">Diferenciais</a>
       <a href="#processo">Processo</a>
       <a href="#investimento">Investimento</a>
+      <a href="#sobre">Sobre</a>
     </nav>
-    <a class="btn btn-gold" data-contact href="#contato">Começar um projeto</a>
+    <a class="btn btn-ink" data-contact href="#contato">Começar um projeto</a>
   </div>
 </header>
 
 <main>
-  <section class="hero" aria-label="Apresentação" style="padding-bottom:80px">
+  <section class="hero" aria-label="Apresentação">
     <div class="wrap hero-grid">
       <div>
-        <span class="kick">Sites sob medida · Curitiba</span>
-        <h1>Sites que têm a <i>alma</i> do seu negócio.</h1>
-        <p class="lead">Sou <b>Moshik Gueta</b>. Desenho e construo sites únicos para <b>cafés, restaurantes e marcas independentes</b>: cardápio interativo, pedidos pelo WhatsApp e três idiomas, com o jeito e a história de cada casa. Nada de modelo pronto.</p>
+        <span class="kick">Sites e plataformas sob medida</span>
+        <h1>Sites com a <i class="t">alma</i> do seu negócio.</h1>
+        <p class="lead">Sou <b>Moshik Gueta</b>. Desenho e construo sites e plataformas únicos para <b>cafés, restaurantes, escolas e marcas independentes</b>: cardápio interativo, pedidos pelo WhatsApp, cursos online e três idiomas. Nada de modelo pronto.</p>
         <div class="cta">
-          <a class="btn btn-gold" data-contact href="#contato">Quero um site assim
+          <a class="btn btn-terra" data-contact href="#contato">Quero um site assim
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="btn btn-line" href="#trabalhos">Ver trabalhos</a>
         </div>
         <div class="proof">
-          <div><b>10–15</b><span>dias para ficar no ar</span></div>
-          <div><b>3</b><span>idiomas no mesmo site</span></div>
+          <div><b>3</b><span>projetos no ar</span></div>
+          <div><b>10–15</b><span>dias para um site ficar pronto</span></div>
           <div><b>100%</b><span>sob medida, sem template</span></div>
         </div>
       </div>
       <div class="devices" aria-hidden="true">
-        <div class="browser"><div class="bar"><i></i><i></i><i></i><span>moshikgueta.github.io/El-tumi</span></div><img src="shots/tumi-hero.jpg" alt="" width="2160" height="1350" fetchpriority="high"></div>
-        <div class="phone"><img src="shots/balcao-feed.jpg" alt="" width="1170" height="2532"></div>
+        <div class="browser"><div class="bar"><i></i><i></i><i></i><span>hebraicofluente.com.br</span></div><img src="shots/hf-hero.jpg" alt="" width="2160" height="1350" fetchpriority="high"></div>
+        <div class="phone p2"><img src="shots/balcao-feed.jpg" alt="" width="1170" height="2532"></div>
+        <div class="phone"><img src="shots/tumi-feed.jpg" alt="" width="1170" height="2532"></div>
       </div>
     </div>
   </section>
 
   <div class="strip" aria-label="Projetos no ar">
-    <div class="wrap"><span>No ar</span><b>Balcão <i>Pizza Napoletana</i></b><b>El Tumi <i>Café</i></b></div>
+    <div class="wrap"><span class="dot" aria-hidden="true"></span><span>No ar</span><b>Hebraico <i>Fluente</i></b><b>El Tumi <i>Café</i></b><b>Balcão <i>Pizza Napoletana</i></b></div>
   </div>
 
   <section id="trabalhos">
     <div class="wrap">
       <div class="sec-head">
-        <div><span class="kick">Trabalhos selecionados</span><h2>Cada site, <i>uma casa</i> diferente.</h2></div>
-        <p>Não existe um modelo que eu adapto. Cada projeto começa no balcão do cliente, entendendo o que faz aquele lugar ser especial, e vira um site que só ele tem.</p>
+        <div><span class="kick">Trabalhos selecionados</span><h2>Cada projeto, <i class="t">uma casa</i> diferente.</h2></div>
+        <p>Não existe um modelo que eu adapto. Cada projeto começa entendendo o que faz aquele negócio ser especial e vira um site que só ele tem.</p>
       </div>
 
       <article class="case">
         <div class="case-media">
-          <div class="browser"><div class="bar"><i></i><i></i><i></i><span>moshikgueta.github.io/El-tumi</span></div><img src="shots/tumi-menu.jpg" alt="Cardápio digital do El Tumi Café com filtros e busca" width="2160" height="1350" loading="lazy"></div>
-          <div class="phone"><img src="shots/tumi-feed.jpg" alt="Cardápio do El Tumi em modo feed no celular" width="1170" height="2532" loading="lazy"></div>
+          <div class="browser"><div class="bar"><i></i><i></i><i></i><span>hebraicofluente.com.br/cursos</span></div><img src="shots/hf-cursos.jpg" alt="Página de cursos do Hebraico Fluente" width="2160" height="1350" loading="lazy"></div>
+          <div class="phone"><img src="shots/hf-mapa.jpg" alt="Mapa da jornada do aluno na plataforma Hebraico Fluente" width="540" height="1169" loading="lazy"></div>
         </div>
         <div>
-          <span class="case-num">01 · Café peruano</span>
+          <span class="case-num">01 · Plataforma de ensino <span class="badge">Projeto próprio</span></span>
+          <h3>Hebraico Fluente</h3>
+          <p class="place">Curso online de hebraico para brasileiros</p>
+          <p class="story">A minha própria escola, construída do zero. Não é um site com vídeos: é uma <b>plataforma completa</b>, em que o aluno se cadastra, paga e aprende a ler hebraico lição por lição.</p>
+          <ul class="built">
+            <li>Conta do aluno, progresso salvo e mapa da jornada</li>
+            <li>Lições com exercícios interativos: ouvir, escrever e montar palavras</li>
+            <li>Pagamento por PIX e cartão, com acesso liberado na hora</li>
+            <li>Páginas de conteúdo e blog para atrair alunos pelo Google</li>
+          </ul>
+          <a class="link" href="https://hebraicofluente.com.br" target="_blank" rel="noopener">Ver a plataforma ao vivo ↗</a>
+        </div>
+      </article>
+
+      <article class="case rev">
+        <div class="case-media">
+          <div class="browser"><div class="bar"><i></i><i></i><i></i><span>moshikgueta.github.io/El-tumi</span></div><img src="shots/tumi-menu.jpg" alt="Cardápio digital do El Tumi Café com filtros e busca" width="2160" height="1350" loading="lazy"></div>
+          <div class="phone"><img src="shots/tumi-phone.jpg" alt="Site do El Tumi no celular" width="1170" height="2532" loading="lazy"></div>
+        </div>
+        <div>
+          <span class="case-num">02 · Café peruano</span>
           <h3>El Tumi Café</h3>
           <p class="place">Bigorrilho, Curitiba</p>
           <p class="story">Um café de especialidade com alma peruana e um método raro, o <b>Mupeco</b>, de cerâmica. O desafio era explicar sabores que pouca gente conhece e receber turistas.</p>
@@ -257,20 +306,20 @@ footer a{text-decoration:none;color:var(--muted)}
         </div>
       </article>
 
-      <article class="case rev">
+      <article class="case">
         <div class="case-media">
           <div class="browser"><div class="bar"><i></i><i></i><i></i><span>moshikgueta.github.io/balcao-pizza</span></div><img src="shots/balcao-menu.jpg" alt="Cardápio da Balcão Pizza Napoletana com a pizza em destaque" width="2160" height="1350" loading="lazy"></div>
           <div class="phone"><img src="shots/balcao-phone.jpg" alt="Site da Balcão no celular" width="1170" height="2532" loading="lazy"></div>
         </div>
         <div>
-          <span class="case-num">02 · Pizzaria napoletana</span>
+          <span class="case-num">03 · Pizzaria napoletana</span>
           <h3>Balcão Pizza Napoletana</h3>
           <p class="place">Bigorrilho, Curitiba</p>
           <p class="story">Uma pizzaria de bairro que queria <b>vender direto, sem a comissão dos aplicativos</b>. O site virou o balcão digital da casa.</p>
           <ul class="built">
             <li>Pedido pronto no WhatsApp, com horário de retirada</li>
-            <li>Vitrine das pizzas com observação por item</li>
-            <li>Aberto/fechado ao vivo e horários só quando abre</li>
+            <li>Vitrine das pizzas, com observação por item</li>
+            <li>Aberto ou fechado ao vivo, e horários só quando abre</li>
             <li>Cartão fidelidade: 10 pedidos, 1 pizza grátis</li>
             <li>Panfleto com QR code para os vizinhos</li>
           </ul>
@@ -283,16 +332,16 @@ footer a{text-decoration:none;color:var(--muted)}
   <section id="diferenciais" class="feat">
     <div class="wrap">
       <div class="sec-head">
-        <div><span class="kick">Diferenciais</span><h2>O que um template <i>não faz</i>.</h2></div>
-        <p>Cardápios digitais genéricos deixam todos os lugares iguais. Um site do Gueta Studio é pensado para o seu cliente abrir, curtir e mandar para os amigos.</p>
+        <div><span class="kick">Diferenciais</span><h2>O que um template <i class="t">não faz</i>.</h2></div>
+        <p>Sites genéricos deixam todos os negócios iguais. Um projeto do Gueta Studio é pensado para o seu cliente abrir, usar e mandar para os amigos.</p>
       </div>
       <div class="fgrid">
-        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20 20 4M14 4h6v6"/></svg><h3>Feito sob medida</h3><p>Cores, fotos, textos e detalhes que vêm da sua casa. Nenhum site meu parece com outro.</p></div>
-        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M12 10.5c-1-1.5-3.5-1-3.5 1 0 1.8 3.5 3.5 3.5 3.5s3.5-1.7 3.5-3.5c0-2-2.5-2.5-3.5-1z"/></svg><h3>Cardápio em modo feed</h3><p>Um item por tela, como nas redes sociais. O cliente desliza, curte e compartilha.</p></div>
-        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1-4.2A8 8 0 1 1 20 12z"/></svg><h3>Pedido no WhatsApp</h3><p>O pedido chega pronto na sua conversa, sem comissão de aplicativo no meio.</p></div>
-        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg><h3>Três idiomas</h3><p>Português, espanhol e inglês, escolhidos sozinhos pelo idioma do celular do visitante.</p></div>
-        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>Rápido no celular</h3><p>Leve, sem aplicativo para baixar e testado em iPhone e Android, das telas pequenas às grandes.</p></div>
-        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>O site é seu</h3><p>Domínio e arquivos no nome do seu negócio. Sem mensalidade obrigatória e sem prender você.</p></div>
+        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/></svg><h3>Feito sob medida</h3><p>Cores, fotos, textos e detalhes que vêm do seu negócio. Nenhum projeto meu parece com outro.</p></div>
+        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M12 10.5c-1-1.5-3.5-1-3.5 1 0 1.8 3.5 3.5 3.5 3.5s3.5-1.7 3.5-3.5c0-2-2.5-2.5-3.5-1z"/></svg><h3>Interativo de verdade</h3><p>Cardápio em modo feed, exercícios, curtidas: o visitante participa em vez de só rolar a página.</p></div>
+        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1-4.2A8 8 0 1 1 20 12z"/></svg><h3>Vende direto</h3><p>Pedido pronto no WhatsApp ou pagamento online, sem comissão de aplicativo no meio.</p></div>
+        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg><h3>Três idiomas</h3><p>Português, espanhol e inglês, escolhidos sozinhos pelo idioma do celular do visitante.</p></div>
+        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>Rápido no celular</h3><p>Leve, sem aplicativo para baixar e testado em iPhone e Android, das telas pequenas às grandes.</p></div>
+        <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>O site é seu</h3><p>Domínio e arquivos no nome do seu negócio. Sem mensalidade obrigatória e sem prender você.</p></div>
       </div>
     </div>
   </section>
@@ -300,23 +349,23 @@ footer a{text-decoration:none;color:var(--muted)}
   <section id="processo">
     <div class="wrap">
       <div class="sec-head">
-        <div><span class="kick">Processo</span><h2>Do primeiro café <i>ao site no ar</i>.</h2></div>
-        <p>Simples para você, cuidadoso do meu lado. Em média, de 10 a 15 dias úteis entre a conversa e o lançamento.</p>
+        <div><span class="kick">Processo</span><h2>Do primeiro café <i class="t">ao site no ar</i>.</h2></div>
+        <p>Simples para você, cuidadoso do meu lado. Em média, de 10 a 15 dias úteis entre a conversa e o lançamento de um site.</p>
       </div>
       <div class="steps">
-        <div class="step"><h3>Conversa</h3><p>Vou até você para entender a casa, o público e o que faz o seu lugar ser único.</p><span class="when">Dia 1</span></div>
-        <div class="step"><h3>Prévia</h3><p>Você recebe um link para ver no celular, já com o seu cardápio e as suas fotos.</p><span class="when">Até 7 dias</span></div>
+        <div class="step"><h3>Conversa</h3><p>Entendo o seu negócio, o seu público e o que faz o seu lugar ser único.</p><span class="when">Dia 1</span></div>
+        <div class="step"><h3>Prévia</h3><p>Você recebe um link para ver no celular, já com o seu conteúdo e as suas fotos.</p><span class="when">Até 7 dias</span></div>
         <div class="step"><h3>Ajustes</h3><p>Duas rodadas de mudanças em textos, fotos e detalhes, até ficar com a sua cara.</p><span class="when">Semana 2</span></div>
-        <div class="step"><h3>No ar</h3><p>Site publicado, QR codes para as mesas e um passo a passo para a sua equipe.</p><span class="when">10–15 dias</span></div>
+        <div class="step"><h3>No ar</h3><p>Site publicado, QR codes prontos e um passo a passo para a sua equipe.</p><span class="when">10–15 dias</span></div>
       </div>
     </div>
   </section>
 
-  <section id="investimento" class="price">
+  <section id="investimento" class="night">
     <div class="wrap">
       <div class="sec-head">
-        <div><span class="kick">Investimento</span><h2>Um valor, <i>sem surpresa</i>.</h2></div>
-        <p>Pagamento único pelo projeto. Menos do que um ano de mensalidade de muitos cardápios genéricos, e o site continua sendo seu.</p>
+        <div><span class="kick">Investimento</span><h2>Um valor, <i class="t">sem surpresa</i>.</h2></div>
+        <p>Pagamento único pelo projeto. Menos do que um ano de mensalidade de muitos sites genéricos, e o site continua sendo seu.</p>
       </div>
       <div class="plans">
         <div class="plan">
@@ -324,10 +373,10 @@ footer a{text-decoration:none;color:var(--muted)}
           <p class="desc">Para ter um site bonito, rápido e um cardápio fácil de usar.</p>
           <div class="amount"><small>R$</small><b>1.800</b></div>
           <ul>
-            <li>Página da casa com fotos, história e horários</li>
-            <li>Cardápio completo com busca e filtros</li>
+            <li>Página do negócio com fotos, história e horários</li>
+            <li>Cardápio ou catálogo completo, com busca e filtros</li>
             <li>Botões de WhatsApp, Instagram e “Como chegar”</li>
-            <li>QR code para as mesas</li>
+            <li>QR code para as mesas ou o balcão</li>
             <li>Duas rodadas de ajustes</li>
           </ul>
           <a class="btn btn-line" data-contact data-plan="Essencial" href="#contato">Escolher Essencial</a>
@@ -339,59 +388,73 @@ footer a{text-decoration:none;color:var(--muted)}
           <div class="amount"><small>R$</small><b>2.800</b></div>
           <ul>
             <li>Tudo do pacote Essencial</li>
-            <li class="plus">Cardápio em modo feed com curtidas</li>
+            <li class="plus">Cardápio em modo feed, com curtidas</li>
             <li class="plus">Português, espanhol e inglês</li>
             <li class="plus">Um destaque interativo do diferencial da casa</li>
             <li class="plus">Pedidos pelo WhatsApp ou loja da casa</li>
-            <li class="plus">Panfleto para imprimir com QR code</li>
+            <li class="plus">Panfleto para imprimir, com QR code</li>
           </ul>
-          <a class="btn btn-gold" data-contact data-plan="Completo" href="#contato">Escolher Completo</a>
+          <a class="btn btn-terra" data-contact data-plan="Completo" href="#contato">Escolher Completo</a>
         </div>
       </div>
-      <div class="care">
-        <div><h3>Manutenção</h3></div>
-        <p>Preços, itens e fotos sempre atualizados, domínio próprio, hospedagem e suporte pelo WhatsApp. Opcional, cancele quando quiser.</p>
-        <b>R$ 120 <small>/ mês</small></b>
+      <div class="rows">
+        <div class="row">
+          <h3>Plataformas</h3>
+          <p>Cursos online, área de alunos ou clientes, login e pagamento: projetos como o Hebraico Fluente, desenhados a partir do seu modelo de negócio.</p>
+          <b>Sob consulta</b>
+        </div>
+        <div class="row">
+          <h3>Manutenção</h3>
+          <p>Preços, itens e fotos sempre atualizados, domínio próprio, hospedagem e suporte pelo WhatsApp. Opcional, cancele quando quiser.</p>
+          <b>R$ 120 <small>/ mês</small></b>
+        </div>
       </div>
-      <p class="fine">Valores para Curitiba e região. Projetos com necessidades especiais (pagamento online, várias unidades) recebem orçamento próprio.</p>
+      <p class="fine">Valores para Curitiba e região. Pagamento: 50% na aprovação e 50% na entrega, por Pix ou transferência.</p>
     </div>
   </section>
 
   <section id="sobre">
     <div class="wrap about">
-      <div><span class="kick">Sobre</span></div>
+      <figure class="portrait">
+        <img src="shots/moshik.jpg" alt="Moshik Gueta" width="680" height="850" loading="lazy">
+        <figcaption>Moshik Gueta · fundador</figcaption>
+      </figure>
       <div>
-        <p class="big">Acredito que um negócio com história merece um site que <i>conte essa história</i>, e não um formulário igual ao de todo mundo.</p>
-        <p>O Gueta Studio é o meu estúdio de sites sob medida. Trabalho de perto com cada cliente, do primeiro café ao lançamento, e cuido de cada detalhe: das fotos ao texto, do celular mais simples ao computador.</p>
-        <p>Meu foco são cafés, restaurantes e marcas independentes que querem aparecer do jeito que são, falar com turistas e vender direto, sem depender só de aplicativos.</p>
+        <span class="kick">Sobre</span>
+        <p class="big">Um negócio com história merece um site que <i class="t">conte essa história</i>, e não um formulário igual ao de todo mundo.</p>
+        <p>Sou israelense e há mais de seis anos ensino hebraico a brasileiros. Para isso, construí do zero a minha própria plataforma, o Hebraico Fluente. Foi ali que aprendi a fazer tecnologia que as pessoas realmente usam.</p>
+        <p>No Gueta Studio, coloco esse mesmo cuidado no projeto de cada cliente: trabalho de perto, do primeiro café ao lançamento, e cuido de cada detalhe, das fotos ao texto, do celular mais simples ao computador.</p>
+        <ul class="langs" aria-label="Idiomas de atendimento">
+          <li>Português</li><li>Español</li><li>English</li><li><span class="he" lang="he">עברית</span></li>
+        </ul>
         <p class="sig">Moshik Gueta<small>Fundador · Gueta Studio</small></p>
       </div>
     </div>
   </section>
 
-  <section id="faq" class="feat" style="padding-top:clamp(80px,10vw,120px)">
+  <section id="faq" class="feat">
     <div class="wrap">
       <div class="sec-head" style="margin-bottom:28px">
-        <div><span class="kick">Perguntas</span><h2>Antes de <i>começar</i>.</h2></div>
+        <div><span class="kick">Perguntas</span><h2>Antes de <i class="t">começar</i>.</h2></div>
       </div>
       <div class="faq">
-        <details><summary>Preciso entender de tecnologia?</summary><p>Não. Você me passa o cardápio, as fotos e o que faz a sua casa ser especial. Eu cuido de todo o resto, inclusive de colocar o site no ar.</p></details>
+        <details><summary>Preciso entender de tecnologia?</summary><p>Não. Você me passa o conteúdo, as fotos e o que faz o seu negócio ser especial. Eu cuido de todo o resto, inclusive de colocar o site no ar.</p></details>
         <details><summary>E se eu mudar preços ou o cardápio?</summary><p>Com a manutenção, eu atualizo para você (até quatro pedidos por mês). Sem manutenção, combinamos cada atualização à parte.</p></details>
-        <details><summary>O site fica pronto em quanto tempo?</summary><p>Em média de 10 a 15 dias úteis, contando a partir do momento em que recebo o seu material. A primeira prévia chega em até sete dias.</p></details>
+        <details><summary>O site fica pronto em quanto tempo?</summary><p>Em média de 10 a 15 dias úteis, contando a partir do momento em que recebo o seu material. A primeira prévia chega em até sete dias. Plataformas têm cronograma próprio.</p></details>
         <details><summary>Como funciona o pagamento?</summary><p>50% na aprovação do projeto e 50% na entrega, por Pix ou transferência.</p></details>
         <details><summary>Eu fico preso a você?</summary><p>Não. O domínio e os arquivos ficam no nome do seu negócio. A manutenção é opcional e pode ser cancelada com 30 dias de aviso.</p></details>
-        <details><summary>Atende fora de Curitiba?</summary><p>Sim. A conversa inicial pode ser por vídeo, e o site funciona igual em qualquer cidade.</p></details>
+        <details><summary>Atende fora de Curitiba?</summary><p>Sim. A conversa inicial pode ser por vídeo, em português, espanhol, inglês ou hebraico, e o site funciona igual em qualquer cidade.</p></details>
       </div>
     </div>
   </section>
 
-  <section id="contato" class="final">
+  <section id="contato" class="final night">
     <div class="wrap">
       <span class="kick">Vamos conversar</span>
-      <h2>O seu negócio merece um site <i>à altura</i>.</h2>
-      <p>Me conte sobre a sua casa. Em até um dia eu respondo e, se fizer sentido, preparo uma prévia sem compromisso.</p>
+      <h2>O seu negócio merece um site <i class="t">à altura</i>.</h2>
+      <p>Me conte sobre o seu negócio. Em até um dia eu respondo e, se fizer sentido, preparo uma prévia sem compromisso.</p>
       <div class="cta">
-        <a class="btn btn-gold" data-contact href="#contato">
+        <a class="btn btn-terra" data-contact href="#contato">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
           Falar no WhatsApp</a>
         <a class="btn btn-line" data-ig href="#" target="_blank" rel="noopener">Instagram</a>
@@ -401,20 +464,20 @@ footer a{text-decoration:none;color:var(--muted)}
 </main>
 
 <footer>
-  <div class="wrap"><span>© <span data-year></span> Gueta Studio · Sites sob medida</span><span><a href="#trabalhos">Trabalhos</a> · <a href="#investimento">Investimento</a> · <a href="#contato">Contato</a></span></div>
+  <div class="wrap"><span>© <span data-year></span> Gueta Studio · Sites e plataformas sob medida</span><span><a href="#trabalhos">Trabalhos</a> · <a href="#investimento">Investimento</a> · <a href="#contato">Contato</a></span></div>
 </footer>
 
 <script>
 /* ========= EDITE AQUI ========= */
 const STUDIO = {
-  whatsapp: "5541999919434",          // seu WhatsApp, só dígitos com DDI e DDD (ex.: "5541999999999")
-  instagram: ""            // seu @ do Instagram, sem o @ (ex.: "guetastudio")
+  whatsapp: "5541999919434",   // só dígitos, com DDI e DDD
+  instagram: ""                // @ do Instagram, sem o @ (vazio = botão escondido)
 };
 /* ============================== */
 const $$ = s => [...document.querySelectorAll(s)];
 $$("[data-year]").forEach(e => e.textContent = new Date().getFullYear());
 $$("[data-contact]").forEach(a => {
-  if (!STUDIO.whatsapp) return;  // sem número: os botões levam para a seção de contato
+  if (!STUDIO.whatsapp) return;
   const plan = a.dataset.plan ? ` Tenho interesse no pacote ${a.dataset.plan}.` : "";
   a.href = "https://wa.me/" + STUDIO.whatsapp + "?text=" + encodeURIComponent("Olá, Moshik! Vi o site do Gueta Studio e quero um site para o meu negócio." + plan);
   a.target = "_blank"; a.rel = "noopener";
