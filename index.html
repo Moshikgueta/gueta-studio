@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400&text=%D7%A2%D7%91%D7%A8%D7%99%D7%AA&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="shots/hf-hero.jpg">
+<link rel="preload" as="image" href="media/atalhos.jpg">
 <style>
 :root{
   /* Pedra de Jerusalém, tinta azul-marinho e terracota: a mesma família de cores dos meus projetos */
@@ -91,6 +91,21 @@ h1{font-size:clamp(54px,7.2vw,106px);line-height:.95;margin:24px 0 28px}
 .phone::after{content:"";position:absolute;top:13px;left:50%;transform:translateX(-50%);width:30%;height:15px;border-radius:10px;background:var(--night)}
 .phone.p2{right:26%;bottom:-6%;width:27%;z-index:1}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:44px}.devices{max-width:580px}}
+
+/* vídeo das interações no hero */
+.hero-v{position:relative;width:100%}
+.hero-v .browser{position:relative;left:auto;top:auto;width:100%}
+.hero-v .browser .bar span{transition:opacity .2s ease}
+.hero-v video{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:#101D31}
+.hv-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.hv-tabs button{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:58px;padding:12px 10px 8px;border:0;border-radius:12px;background:transparent;text-align:left;cursor:pointer;color:var(--muted);transition:background-color .2s ease,color .2s ease}
+.hv-tabs button::before{content:"";position:absolute;left:10px;right:10px;top:0;height:2px;border-radius:1px;background:var(--line-2)}
+.hv-tabs button i{position:absolute;left:10px;right:10px;top:0;height:2px;border-radius:1px;background:var(--terra);transform-origin:left;transform:scaleX(0)}
+.hv-tabs b{font:600 13px/1.25 var(--sans);color:inherit}
+.hv-tabs small{font-size:11.5px;line-height:1.3;color:var(--muted)}
+.hv-tabs button[aria-current=true]{color:var(--ink);background:rgba(255,255,255,.55)}
+@media (hover:hover){.hv-tabs button:hover{color:var(--ink)}}
+@media (max-width:600px){.hv-tabs{grid-template-columns:1fr 1fr}.hv-tabs button{min-height:52px}}
 
 /* strip */
 .strip{border-block:1px solid var(--line);padding:22px 0;background:var(--paper)}
@@ -259,6 +274,39 @@ h2{font-size:clamp(42px,5.4vw,74px);line-height:1;margin-top:18px}
 .sig small{display:block;font:600 12.5px var(--sans);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);margin-top:10px}
 @media (max-width:900px){.about{grid-template-columns:1fr;gap:40px}.portrait{max-width:420px}}
 
+/* sobre (trajetória) */
+.about2{display:grid;grid-template-columns:.78fr 1.22fr;gap:80px;align-items:start}
+.about2 .portrait{position:sticky;top:104px;margin:0}
+.about2 .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
+.about2 .portrait figcaption{position:static;margin-top:16px;background:none;padding:0;border-radius:0}
+.about2 .portrait figcaption b{display:block;font:400 30px/1.1 var(--serif);color:var(--ink)}
+.about2 .portrait figcaption span{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
+.about2 .portrait .li{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none}
+.about2 .portrait .li svg{width:18px;height:18px;color:#0A66C2}
+@media (hover:hover){.about2 .portrait .li:hover{color:var(--terra)}}
+.about2 .big{font:400 clamp(30px,3.3vw,46px)/1.12 var(--serif);margin:22px 0 24px;text-wrap:balance}
+.about2 .intro p{color:var(--ink-soft);margin:0 0 16px;max-width:38em;font-size:17px}
+.about2 .intro p b{color:var(--ink);font-weight:600}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:38px 0 46px}
+.pillar{padding:24px 22px 26px;border-radius:18px;background:var(--paper);box-shadow:0 0 0 1px var(--line)}
+.pillar .ic{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--terra-soft);color:var(--terra-2);margin-bottom:18px}
+.pillar .ic svg{width:20px;height:20px}
+.pillar h3{font-size:25px;line-height:1.08;margin-bottom:10px}
+.pillar p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+.tline-h{font:600 12.5px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--terra);margin:0 0 6px}
+.tline{list-style:none;margin:0;padding:0}
+.tline li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+.tline li:last-child{border-bottom:1px solid var(--line)}
+.tline .when{font:400 22px/1.2 var(--serif);color:var(--terra);font-variant-numeric:lining-nums}
+.tline b{display:block;font-weight:600;font-size:16px;margin-bottom:3px}
+.tline span{display:block;font-size:14.5px;color:var(--ink-soft)}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 0;padding:0;list-style:none}
+.creds li{padding:7px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line-2);font-size:13.5px;color:var(--ink-soft)}
+.creds .he{font-size:16px;line-height:1}
+@media (max-width:1000px){.pillars{grid-template-columns:1fr}}
+@media (max-width:900px){.about2{grid-template-columns:1fr;gap:36px}.about2 .portrait{position:static;max-width:380px}}
+@media (max-width:560px){.tline li{grid-template-columns:1fr;gap:4px}}
+
 /* faq */
 .faq{max-width:860px}
 details{border-top:1px solid var(--line-2)}
@@ -315,10 +363,16 @@ footer a{text-decoration:none;color:var(--on-night)}
           <div><b>100%</b><span>sob medida, sem template</span></div>
         </div>
       </div>
-      <div class="devices" aria-hidden="true">
-        <div class="browser"><div class="bar"><i></i><i></i><i></i><span>hebraicofluente.com.br</span></div><img src="shots/hf-hero.jpg" alt="" width="2160" height="1350" fetchpriority="high"></div>
-        <div class="phone p2"><img src="shots/balcao-feed.jpg" alt="" width="1170" height="2532"></div>
-        <div class="phone"><img src="shots/tumi-feed.jpg" alt="" width="1170" height="2532"></div>
+      <div class="hero-v">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i><span id="hvUrl">moshikgueta.github.io/balcao-pizza</span></div>
+          <video id="hv" muted loop playsinline preload="metadata" poster="media/atalhos.jpg" width="1280" height="800" aria-label="Vídeo com as interações criadas para os sites: a pizza que gira, o cardápio em modo feed, o Mupeco interativo e a luz que acende nos móveis"><source src="media/atalhos.mp4" type="video/mp4"></video>
+        </div>
+        <div class="hv-tabs" id="hvTabs" aria-label="Interações no vídeo">
+          <button type="button" data-t="0" data-u="moshikgueta.github.io/balcao-pizza" aria-current="true"><i></i><b>A pizza que gira</b><small>Balcão</small></button>
+          <button type="button" data-t="9.77" data-u="moshikgueta.github.io/balcao-pizza" aria-current="false"><i></i><b>Cardápio em feed</b><small>Balcão · El Tumi</small></button>
+          <button type="button" data-t="16.63" data-u="moshikgueta.github.io/El-tumi" aria-current="false"><i></i><b>Mupeco interativo</b><small>El Tumi</small></button>
+          <button type="button" data-t="22.1" data-u="moshikgueta.github.io/draft-interiores" aria-current="false"><i></i><b>Acenda a luz</b><small>Draft Interiores</small></button>
+        </div>
       </div>
     </div>
   </section>
@@ -583,18 +637,51 @@ footer a{text-decoration:none;color:var(--on-night)}
   </section>
 
   <section id="sobre">
-    <div class="wrap about">
+    <div class="wrap about2">
       <figure class="portrait">
-        <img src="shots/moshik.jpg" alt="Moshik Gueta" width="680" height="850" loading="lazy">
-        <figcaption>Moshik Gueta · fundador</figcaption>
+        <img src="shots/moshik.jpg" alt="Moshik Gueta, fundador do Gueta Studio" width="680" height="850" loading="lazy">
+        <figcaption><b>Moshik Gueta</b><span>Fundador do Gueta Studio · educador e desenvolvedor</span>
+          <a class="li" href="https://www.linkedin.com/in/moshikgueta/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 3H3.6A.6.6 0 0 0 3 3.6v16.8c0 .3.3.6.6.6h16.8c.3 0 .6-.3.6-.6V3.6a.6.6 0 0 0-.6-.6ZM8.3 18.3H5.7V9.8h2.6v8.5ZM7 8.6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11.3 9.7h-2.6v-4.1c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.2h-2.6V9.8h2.5v1.2c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4v4.7Z"/></svg>Ver meu perfil no LinkedIn</a>
+        </figcaption>
       </figure>
       <div>
-        <span class="kick">Sobre</span>
-        <p class="big">Um negócio com história merece um site que <i class="t">conte essa história</i>, e não um formulário igual ao de todo mundo.</p>
-        <p>Sou israelense e há mais de seis anos ensino hebraico a brasileiros. Para isso, construí do zero a minha própria plataforma, o Hebraico Fluente. Foi ali que aprendi a fazer tecnologia que as pessoas realmente usam.</p>
-        <p>No Gueta Studio, coloco esse mesmo cuidado no projeto de cada cliente: trabalho de perto, do primeiro café ao lançamento, e cuido de cada detalhe, das fotos ao texto, do celular mais simples ao computador.</p>
-        <ul class="langs" aria-label="Idiomas de atendimento">
-          <li>Português</li><li>Español</li><li>English</li><li>Italiano</li><li><span class="he" lang="he">עברית</span></li>
+        <span class="kick">Sobre mim</span>
+        <p class="big">Antes de construir sites, passei anos ensinando pessoas. É por isso que os meus sites <i class="t">se explicam sozinhos</i>.</p>
+        <div class="intro">
+          <p>Sou <b>Moshik Gueta</b>, israelense, e moro em Curitiba desde 2021. A minha carreira começou na <b>educação</b>: dei aula, assumi a gestão pedagógica de uma escola de idiomas e criei cursos no Brasil, em Israel e na Argentina. Esse trabalho me ensinou a ouvir antes de propor e a explicar coisas complexas sem jargão.</p>
+          <p>Foi criando cursos que eu cheguei ao <b>desenvolvimento web</b>. Construí do zero a minha própria plataforma de ensino, com contas de alunos, exercícios interativos e pagamento online. Hoje, no Gueta Studio, uso tudo isso para criar sites que fazem o cliente do meu cliente entender, confiar e agir.</p>
+        </div>
+
+        <div class="pillars">
+          <div class="pillar">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M13.5 6l-3 12"/></svg></span>
+            <h3>Desenvolvimento</h3>
+            <p>Plataformas completas, com login, pagamento e conteúdo interativo, e sites sob medida para pizzaria, café e marcenaria. Do desenho ao site no ar, tudo feito por mim.</p>
+          </div>
+          <div class="pillar">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 5l9 4.5-9 4.5z"/><path d="M7 11.5V16c1.5 1.3 3.2 2 5 2s3.5-.7 5-2v-4.5"/></svg></span>
+            <h3>Educação e metodologia</h3>
+            <p>Gerente Pedagógico em Tel Aviv, professor universitário em Buenos Aires e professor em escola em Curitiba. Formação CELTA e Letras (Inglês).</p>
+          </div>
+          <div class="pillar">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.8-3 3.2-4.6 6-4.6s5.2 1.6 6 4.6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.6c2.4.2 4.2 1.6 5 4.4"/></svg></span>
+            <h3>Gente de todo tipo</h3>
+            <p>Alunos de escola e de universidade, comunidades, equipes de professores e donos de negócio. Atendo em cinco idiomas e me adapto ao jeito de cada cliente.</p>
+          </div>
+        </div>
+
+        <p class="tline-h">Trajetória</p>
+        <ol class="tline">
+          <li><span class="when">Israel</span><div><b>Hebraico como língua materna</b><span>Onde tudo começou.</span></div></li>
+          <li><span class="when">2021–2023</span><div><b>Escola Israelita de Curitiba</b><span>Professor de hebraico e shaliach na comunidade judaica. Na sala de aula, aprendi a ensinar brasileiros de perfis muito diferentes.</span></div></li>
+          <li><span class="when">Tel Aviv</span><div><b>Gerente Pedagógico na New School</b><span>Estruturação de cursos, materiais e experiências de aprendizagem de idiomas, liderando o lado pedagógico.</span></div></li>
+          <li><span class="when">Buenos Aires</span><div><b>Universidad Isaac Abarbanel</b><span>Professor de hebraico na Argentina, com alunos que falam espanhol.</span></div></li>
+          <li><span class="when">Plataforma</span><div><b>Hebraico Fluente</b><span>A minha escola online, construída do zero: contas, progresso, exercícios interativos e pagamento por PIX e cartão.</span></div></li>
+          <li><span class="when">Hoje</span><div><b>Gueta Studio</b><span>Sites e plataformas sob medida para negócios locais: uma pizzaria, um café peruano e uma marcenaria, cada um com a sua cara.</span></div></li>
+        </ol>
+
+        <ul class="creds" aria-label="Formação e idiomas">
+          <li>CELTA (Cambridge)</li><li>Letras · Inglês (UNINTER)</li><li>Português</li><li>Español</li><li>English</li><li>Italiano</li><li><span class="he" lang="he">עברית</span></li>
         </ul>
         <p class="sig">Moshik Gueta<small>Fundador · Gueta Studio</small></p>
       </div>
@@ -664,6 +751,26 @@ else if ("IntersectionObserver" in window) {
   }), {threshold: .35});
   vids.forEach(v => io.observe(v));
 }
+/* vídeo do hero: as abas acompanham o trecho que está passando e pulam para ele */
+(() => {
+  const v = document.getElementById("hv"); if (!v) return;
+  const tabs = [...document.querySelectorAll("#hvTabs button")], url = document.getElementById("hvUrl");
+  const starts = tabs.map(b => +b.dataset.t), end = () => v.duration || 29.57;
+  let cur = -1;
+  function sync(){
+    const t = v.currentTime; let k = 0; starts.forEach((s, i) => { if (t >= s) k = i; });
+    if (k !== cur) { cur = k; tabs.forEach((b, i) => b.setAttribute("aria-current", i === k)); url.textContent = tabs[k].dataset.u; }
+    const next = starts[k + 1] ?? end();
+    tabs.forEach((b, i) => b.firstElementChild.style.transform = `scaleX(${i < k ? 1 : i === k ? Math.min(1, (t - starts[k]) / (next - starts[k])) : 0})`);
+    if (!v.paused) requestAnimationFrame(sync);
+  }
+  v.addEventListener("play", () => requestAnimationFrame(sync));
+  v.addEventListener("seeked", sync);
+  tabs.forEach(b => b.addEventListener("click", () => { v.currentTime = +b.dataset.t + .05; v.play().catch(()=>{}); sync(); }));
+  if (reduceMotion) { v.controls = true; return; }
+  if ("IntersectionObserver" in window) new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? v.play().catch(()=>{}) : v.pause()), {threshold:.25}).observe(v);
+  else v.play().catch(()=>{});
+})();
 const hd = document.querySelector("header");
 addEventListener("scroll", () => hd.classList.toggle("scrolled", scrollY > 20), {passive:true});
 </script>
